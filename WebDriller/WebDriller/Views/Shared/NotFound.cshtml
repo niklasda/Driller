@@ -1,0 +1,21 @@
+﻿@using Driller.Logic.Interfaces.ViewModels
+@model IErrorViewModel
+
+<h4>Page not found</h4>
+
+<p>
+    @if (Model != null)
+    {
+    <p>
+        <strong>Path:</strong> @Model.Message<br />
+
+    </p>
+    }
+
+    @if (Model == null)
+    {
+        <div>
+            <p>No more information available!</p>
+        </div>
+    }
+</p>

@@ -1,0 +1,13 @@
+﻿@using Driller.Logic.Interfaces.ViewModels
+@model IAboutViewModel
+
+<div id="about" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>@Model.Configuration.AppName - About</h1>
+        @Html.Partial("MainMenuPartial")
+    </div>
+
+    <p>&copy; @DateTime.Now.Year - Black Gold Dossier!</p>
+
+    <div onclick="javascript: getName();">Click Me cc!</div>
+</div>

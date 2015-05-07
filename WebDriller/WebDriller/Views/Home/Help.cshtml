@@ -1,0 +1,67 @@
+﻿@using Driller.Logic.Interfaces.ViewModels
+@model IHelpViewModel
+
+<div id="help" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>@Model.Configuration.AppName - Help</h1>
+        @Html.Partial("MainMenuPartial")
+    </div>
+
+    Black Gold (hädanefter förkortat BG) är ett spel för två deltagare. Endera spelar man mot
+
+    en datormotståndare eller mot en annan människa via nätet. Spelet har enkel grafik och
+
+    lättbegripligt gränssnitt och presenteras visuellt i 2D-miljö trots att det till sin natur är ett 3D-
+    spel.
+
+    Spelplanen består av 9 st rutor som symboliserar landytor. Dessa rutor prospekteras av
+
+    spelarna. När en ruta är köpt av en spelare har spelaren möjlighet att 1) låta rutan vara tom, 2)
+
+    köpa en oljeborrningsstation eller 3) ett raffinaderi och placera det i landrutan.
+
+    Varje spelare börjar med €300.000. Det första varje spelare måste göra är att prospektera
+
+    valfri landruta, köpa en oljeborrningsstation och placera den på landrutan. Därefter är det dags
+
+    att borra. Från början syns det inte var det finns olja, utan oljefyndigheter blir synliga först när
+
+    någon spelar har borrat sig fram till en plats där det finns olja.
+
+    Varje meter kostar €1.000 att borra. Därför vill man inte borra djupare än nödvändigt. När
+
+    man borrar ställer man in hur djupt man ska borra och betalar beloppet. Därefter påbörjas
+
+    borrningen. Borren fungerar sedan som sugpump, så har man lyckats hitta olja när man
+
+    borrat så kan man pumpa upp det som man har hittat. Man kan dock inte pumpa upp olja som
+
+    ligger under borrens munstycke. Och hittar man inte olja får man börja om och försöka borra
+
+    djupare på samma plats eller på någon annan landruta.
+
+    Under vissa landrutor finns ingen olja, och dessa blir fler ju längre man spelar. Det finns
+
+    dessutom totalt mindre mängd olja ju längre tid man spelar och desto längre ner är oljan.
+
+    Oljeborrningsstationer får flyttas mellan olika landrutor. Raffinaderier får inte flyttas.
+
+    En spelomgång är slut när den sista landrutan prospekteras. Den spelare som då har mest
+
+    pengar vinner.
+
+    Kostnader:
+
+    €100.000 = Pris för en landruta, €50.000 = oljeborrningsstation, €50.000 = raffinaderi
+
+    €1.000 = per meter man borrar
+
+    Intäkter:
+
+    €10.000/per sekund och oljeborrningsstation som pumpar upp olja. Ifall ett raffinaderi är
+
+    placerat i anslutning till oljeborrningsstationen dubbleras intäkten.
+
+    Nedan är ett exempel på hur spelplanen skulle kunna se ut:
+</div>
+

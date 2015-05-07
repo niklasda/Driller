@@ -1,0 +1,7 @@
+﻿Stop publishing icons
+Icons in CSS not working in subfolder publish
+Url to API not working in subfolder publish
+
+Azure references needed in web project to make sure they are published
+
+http://the-jquerymobile-tutorial.org/index.php

@@ -1,0 +1,17 @@
+﻿@using Driller.Logic.Interfaces.ViewModels
+@model ILeaderboardViewModel
+
+<div id="help" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>@Model.Configuration.AppName - Leaderboard</h1>
+        @Html.Partial("MainMenuPartial")
+    </div>
+    <ul id="leaderboardList">
+        @foreach (var hs in Model.HighScoreViewModels)
+        {
+            <li>@hs.Name - @hs.Score</li>
+        }
+    </ul>
+   
+</div>
+

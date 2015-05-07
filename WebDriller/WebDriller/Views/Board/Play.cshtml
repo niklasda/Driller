@@ -1,0 +1,39 @@
+﻿@using Driller.Logic.GamePlay.Const
+@using Driller.Logic.Interfaces.ViewModels
+@model IPlayViewModel
+
+<div id="board" data-role="page" data-driller-game-state="@((int)GameStateCode.Ready)">
+    <div data-role="header" data-position="fixed">
+        <h1>@Model.Configuration.AppName - In progress - <span id="timerDisplay"></span></h1>
+        @Html.Partial("MainMenuPartial")
+    </div>
+    <div id="plane">
+        <div class="ui-grid-c">
+            <div id="marketSquare_0" class="gameSquare1 ui-block-a" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Market)">2</div>
+            <div id="marketSquare_1" class="gameSquare2 ui-block-b" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Market)">2</div>
+            <div id="marketSquare_2" class="gameSquare3 ui-block-c" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Market)">2</div>
+            <div id="marketSquare_3" class="gameSquare4 ui-block-d" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Market)">2</div>
+        </div>
+        <div class="ui-grid-b">
+            <div id="storageSquare_0" class="gameSquare1 ui-block-a" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Storage)">1</div>
+            <div id="storageSquare_1" class="gameSquare2 ui-block-b" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Storage)">1</div>
+            <div id="storageSquare_2" class="gameSquare3 ui-block-c" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Storage)">1</div>
+        </div>
+        <div class="ui-grid-c">
+            <div id="drillableSquare_0" class="gameSquare1 ui-block-a" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Drillable)">0</div>
+            <div id="drillableSquare_1" class="gameSquare2 ui-block-b" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Drillable)">0</div>
+            <div id="drillableSquare_2" class="gameSquare3 ui-block-c" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Drillable)">0</div>
+            <div id="drillableSquare_3" class="gameSquare4 ui-block-d" data-driller-state="@((int)SquareStateCode.Available)" data-driller-type="@((int)SquareTypeCode.Drillable)">0</div>
+        </div>
+    </div>
+    <p> <a id="startGame" onclick="javascript:startGame();">Start Game</a></p>
+
+    @Html.Partial("StatusBarPartial")
+
+    <div id="log" class="logBox"><br /></div>
+
+    @Html.Partial("MarketSquareMenuPartial")
+    @Html.Partial("StorageSquareMenuPartial")
+    @Html.Partial("PumpableSquareMenuPartial")
+    @Html.Partial("DrillableSquareMenuPartial")
+</div>

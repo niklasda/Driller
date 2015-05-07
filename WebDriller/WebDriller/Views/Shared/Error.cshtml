@@ -1,0 +1,28 @@
+﻿@model HandleErrorInfo
+
+<h4>An error has occured</h4>
+
+<p>
+    @if (Model != null)
+    {
+        <div>
+            <p>
+                <b>Exception:</b> @Model.Exception.Message<br />
+                <b>Controller:</b> @Model.ControllerName<br />
+                <b>Action:</b> @Model.ActionName
+            </p>
+            <div style="overflow:scroll">
+                <pre>
+                    @Model.Exception.StackTrace
+                        </pre>
+            </div>
+        </div>
+    }
+
+    @if (Model == null)
+    {
+        <div>
+            <p>No more information available!</p>
+        </div>
+    }
+</p>

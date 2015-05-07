@@ -1,0 +1,18 @@
+﻿@using Driller.Logic.Interfaces.ViewModels
+@model IStartViewModel
+
+<div id="start" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>Welcome To @Model.Configuration.AppName</h1>
+        @Html.Partial("MainMenuPartial")
+    </div>
+
+    <div data-role="content">
+        <br/>
+        <p> <a href="http://webdriller.azurewebsites.net/">Azure</a></p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h1>&copy; 2014</h1>
+    </div>
+</div>
